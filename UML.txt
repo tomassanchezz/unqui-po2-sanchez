@@ -1,0 +1,80 @@
+UML 
+
+Es un lenguaje que utilizamos para modelar.
+
+Unified Modeling Language. Es un lenguaje grafico que permite definir diseños de soluciones orientadas a objetos.
+
+Diagramas de clases.
+- Relaciones entre clases en el sistema
+- Subclasificacion
+- Definicion de las interfaces de las clases
+- Colaboraciones
+- Dependencias
+
+Diagramas de secuencia.
+- Interaccion entre instancias
+- Envio de mensajes
+ -Respuestas en los mensajes
+
+Una clase se define en un rectangulo dividido.
+
+----------------------|
+Nombre de clase|
+----------------------|
+Atributo              |
+Atributo              |
+----------------------|
+Operacion           |
+Operacion           |
+----------------------|
+
+---------------------------|
+Empleado                  |
+---------------------------|
+-nombre: String        |
+-apellido: String        |
+---------------------------|
++getNombre():String|
++new(String, String)  |
++setNombre(String)  |
+---------------------------|
+
+- = Privado
++ = Publico
+
+Nombre de la clase
+- Debe empezar con mayuscula
+- Es unico y no se repite.
+
+Atributos
+- Representan variables de instancia que no son relaciones
+
+Operaciones
+- Es el protocolo. Se indican los metodos y los paramentros que pueden recibir.
+Tambien es posible indicar el tipo del retorno.
+
+Herencia
+-La flecha indica la subclasificacion
+
+La subclase apunta a la super clase con una flecha con una punta de un triangulo vacio.
+
+Asociacion
+- Indica el rol en la relacion
+- Tiene navegabilidad (Direccion de la flecha)
+- Tiene cardinalidad (Ej *,1)
+
+Orden  --emisor--1-> Emisor
+
+*Una orden posee solamente un emisor.
+*En este caso no podemos conocer con que orden tiene relacion un emisor. Pero si
+con que emisor tiene relacion una orden.
+
+Porque esta subrayada aveces una operacion?
+Indica que un metodo es de clase. Normalmente un constructor.
+
+Porque estan en italicas aveces las operaciones?
+La clase u operacion es "abstracta".
+"clase abstracta"
+"metodo abstracto"
+
+

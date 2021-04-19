@@ -1,0 +1,76 @@
+Tp 1 POO2
+
+1. Evaluación de protocolos de una clase.
+
+Opción 2
+rectangulo = new Rectangulo(esquinaSuperiorIzquierda=unPunto, altura=unaAltura, ancho=unAncho)
+rectangulo.reubicarEsquinaSuperiorIzquierdaEn(unPunto)
+rectangulo.ancho(unAncho)
+rectangulo.alto(unaAltura)
+
+/*Justificacion*/
+
+2. Delegación
+
+Opción 2
+
+class Jefe {
+	method trabajarConFicha(unaFicha) {
+		self.secretario().buscarEnFichero(unaFicha)
+	}
+}
+class Secretario {
+	method buscarEnFichero(unaFicha) {
+		self.fichero().buscar(unaFicha)
+	}
+}
+
+Considero a la segunda implementación como la mejor alternativa, ya que hay una mejor
+división de los objetos que maneja la implementacion y es mucho mas legible y entendible
+por quien sea que lo deba interpretar.
+
+Actividad de Lectura 1.
+1. ¿Qué significa el acceso directo a las variables? De un ejemplo.
+2. ¿Qué significa el acceso indirecto a las variables? De un ejemplo.
+3. ¿Qué ventajas y desventajas presenta cada estrategia referida a los getters y setters?
+
+Acceso directo:
+El acceso directo a variables implica el uso directo de variables en todos los metodos que necesiten su valor.
+
+Ventajas: 
+- Mas legible 
+- Es suficiente
+
+Desventajas:
+- No se pueden hacer cambios a menos que cambies el codigo en la superclase
+- Considerado "mala practica".
+- Asume que el valor de una variables es valido
+
+Acceso indirecto: 
+El acceso indirecto a variables se basa en la implementacion de getters y setters para la implementacion de variables de un objeto.
+
+Ventajas: 
+- Mas flexible
+- Resulta mas facil para generaciones futuras trabajar con esta implementacion
+- Permite crear un unico metodo para setear todas la variables
+
+Desventajas:
+- Sacrifica legibilidad y simplicidad
+- Duplica la cantidad de metodos
+
+Actividad de Lectura 2.
+1. ¿En qué situación es conveniente utilizar "Creation Parameter Method"?
+
+Conviene utilizar CPE cuando estamos utilizando Explicit Initialization.
+
+Actividad de Lectura 3.
+1. ¿Cómo se debe proporcionar acceso a variables que referencian a una colección?
+
+La solucion mas rapida es crear un getting method a la variable, pero en consecuencia vamos a estar revelando mucho de la implementacion del objeto en si. El otro problema es que es dificil mantener la integidad del estado del objeto sin cuando alguien lo esta modificando y no nos avisa. Por ende, debemos privatizar nuestros getters y darle acceso a nuestros clientes de forma limitada a metodos que nosotros creemos. Se van a necesitar mas metodos de lo usual pero al final va a ser mas facil de leer y mas facil de modificar.
+
+Actividad de Lectura 4.
+
+1. ¿Por qué son necesarios dos métodos para asignar el estado a una propiedad booleana?
+
+Primero, evita la exposicion de la representacion a los clientes. Segundo, responde la pregunta de quien hace el cambio.
+El hecho de utilizar los estados en los nombres de los metodos genera un confusión ya que no se sabe si estamos cambiandolo o interrogandolo. Por esta razon es que se suelen utilizar palabras menos naturales pero que le agreguen claridad.
