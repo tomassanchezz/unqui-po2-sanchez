@@ -14,7 +14,7 @@ Diagramas de clases.
 Diagramas de secuencia.
 - Interaccion entre instancias
 - Envio de mensajes
- -Respuestas en los mensajes
+ - Respuestas en los mensajes
 
 Una clase se define en un rectangulo dividido.
 

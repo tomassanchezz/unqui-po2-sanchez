@@ -1,0 +1,57 @@
+Clase2
+Polimorfismo
+
+Cuando dos objetos entienden los mismos mensajes. Nos da mas flexibilidad y nos ahorra tiempo y codigo.
+
+Una clase abstracta o un metodo abstracto refiere a elementos que se crean vacios para luego darles funcionalidad en distintos lugares. Por ejemplo un metodo cerrar de cuenta bancaria sin definir que luego se define en la cuenta corriente y la caja de ahorro asumiendo que dichos metodos van a ejecutarse de manera diferente.
+
+mensaje y metodo son distintos, el mensaje es aquel que se envia a un objeto ej. cuenta.cerrar(). el metodo es el que se encuentra definido dentro de un objeto ej. public void cerrar () {...}.
+
+garbage collection. Se ejecuta en segundo plano, borra de la memoria los objetos que nadie los conoce o nadie los referencia (no se utiliza).
+
+Scopes ->
+class scope
+method scope (una vez que se ejecuta el metodo el garbage collector limpia la variable)
+block scope
+
+Sintaxis JAVA
+
+Paquetes > agrupa clases que tienen caracteristicas comunes (segun el programador)
+ej. ar.edu.unq.po2... -> cada uno corresponde a un folder.
+
+Clases > 
+modificadores:
+public
+abstract
+final -> final quiere decir que no se puede subclasificar.
+
+ej. public final class Plato {
+	String nombre;
+}
+
+las clases tienen que llamarse igual el archivo .java en el que se encuentran
+
+Test >
+carpeta test por fuera de la carpeta src
+nuevo src folder
+nuevo JUnit Jupiter Test
+debe ser en espejo la organizacion de carpetas y archivos.
+
+@BeforeEach es el setup
+@AfterEach es el teardown
+
+Variables de instancia >
+normalmente son privadas.
+Accesibilidad:
+public todos
+protected hasta subclase
+sin modificar hasta package
+private hasta la clase
+
+final -> normalmente se utiliza para definir constantes.
+
+arrayList >
+java.util.ArrayList
+
+ArrayList<Persona> personas;
+
